@@ -1,0 +1,9 @@
+# Compiled binaries and build outputs
+Q1/cpp/main
+q2/output/
+q3/output/
+*.o
+*.out
+
+# Cache
+.claude/
