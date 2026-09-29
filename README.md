@@ -8,14 +8,14 @@ This project investigates a bio inspired sparse neural mesh substrate rather tha
 
 ```mermaid
 flowchart TD
-    InputSignal["Input Letter Signal"] ==> MeshEntry["Layer Zero Entry Neuron"]
-    MeshEntry ==> ForwardPass["Forward Propagation Across Synapses"]
-    ForwardPass ==> ModularTransform["Modular Alphabet Shift"]
-    ModularTransform ==> OutputSignal["Output Letter Signal"]
-    OutputSignal ==> ErrorCalculation["Error Calculation Against Target"]
-    ErrorCalculation ==> BackwardPass["Backward Propagation Along Active Synapses"]
-    BackwardPass ==> RuleEnforcement["Rule Enforcement and Topological Pruning"]
-    RuleEnforcement ==> StructuralFusion["Synaptic Fusion and Column Layer Merging"]
+    InputSignal["Input Letter Signal"] --> MeshEntry["Layer Zero Entry Neuron"]
+    MeshEntry --> ForwardPass["Forward Propagation Across Synapses"]
+    ForwardPass --> ModularTransform["Modular Alphabet Shift"]
+    ModularTransform --> OutputSignal["Output Letter Signal"]
+    OutputSignal --> ErrorCalculation["Error Calculation Against Target"]
+    ErrorCalculation --> BackwardPass["Backward Propagation Along Active Synapses"]
+    BackwardPass --> RuleEnforcement["Rule Enforcement and Topological Pruning"]
+    RuleEnforcement --> StructuralFusion["Synaptic Fusion and Column Layer Merging"]
 ```
 
 ### File Breakdown for Question 1
@@ -66,15 +66,15 @@ Question 2 implements an algorithmic segment tree data structure capable of perf
 
 ```mermaid
 flowchart TD
-    Operations["Incoming Query Stream"] ==> Dispatcher{"Operation Type"}
-    Dispatcher ==>|Type 0| RangeAdd["Range Add: Increment Interval by Delta"]
-    Dispatcher ==>|Type 1| RangeAssign["Range Assign: Overwrite Interval with Value"]
-    Dispatcher ==>|Type 2| RangeMax["Range Max: Query Interval Maximum"]
-    RangeAdd ==> LazyPush["Push Down Pending Operations to Child Nodes"]
-    RangeAssign ==> LazyPush
-    RangeMax ==> LazyPush
-    LazyPush ==> TreeUpdate["Update Interval Maxima in Logarithmic Time"]
-    TreeUpdate ==> BudgetCheck["Record Visits in Budget Counter"]
+    Operations["Incoming Query Stream"] --> Dispatcher{"Operation Type"}
+    Dispatcher -->|Type 0| RangeAdd["Range Add: Increment Interval by Delta"]
+    Dispatcher -->|Type 1| RangeAssign["Range Assign: Overwrite Interval with Value"]
+    Dispatcher -->|Type 2| RangeMax["Range Max: Query Interval Maximum"]
+    RangeAdd --> LazyPush["Push Down Pending Operations to Child Nodes"]
+    RangeAssign --> LazyPush
+    RangeMax --> LazyPush
+    LazyPush --> TreeUpdate["Update Interval Maxima in Logarithmic Time"]
+    TreeUpdate --> BudgetCheck["Record Visits in Budget Counter"]
 ```
 
 ### File Breakdown for Question 2
@@ -117,15 +117,15 @@ Question 3 addresses optimal submatrix discovery in binary grids. Given an R by 
 
 ```mermaid
 flowchart TD
-    BinaryMatrix["Binary Input Matrix of Size R by C"] ==> DPTable["Construct Dynamic Programming Table D"]
-    DPTable ==> CellCheck{"Is Matrix Cell Zero or One"}
-    CellCheck ==>|Cell is Zero| SetZero["D at Coordinate is Zero"]
-    CellCheck ==>|Cell is One on Boundary| SetOne["D at Coordinate is One"]
-    CellCheck ==>|Cell is One Inside Grid| Recurrence["D is One Plus Minimum of Top Left Neighbors"]
-    SetZero ==> Accumulate["Update Maximum Square and Sum Total Squares"]
-    SetOne ==> Accumulate
-    Recurrence ==> Accumulate
-    Accumulate ==> OracleCheck["Verify Against Recursive Brute Force Baseline"]
+    BinaryMatrix["Binary Input Matrix of Size R by C"] --> DPTable["Construct Dynamic Programming Table D"]
+    DPTable --> CellCheck{"Is Matrix Cell Zero or One"}
+    CellCheck -->|Cell is Zero| SetZero["D at Coordinate is Zero"]
+    CellCheck -->|Cell is One on Boundary| SetOne["D at Coordinate is One"]
+    CellCheck -->|Cell is One Inside Grid| Recurrence["D is One Plus Minimum of Top Left Neighbors"]
+    SetZero --> Accumulate["Update Maximum Square and Sum Total Squares"]
+    SetOne --> Accumulate
+    Recurrence --> Accumulate
+    Accumulate --> OracleCheck["Verify Against Recursive Brute Force Baseline"]
 ```
 
 ### File Breakdown for Question 3
