@@ -2,7 +2,7 @@
 
 Special thanks to Hamza and Shamir for making that assignment.
 
-## Section 1: Question 1: Bio Inspired Sparse Neural Mesh Architecture
+## Section 1:  Bio Inspired Sparse Neural Mesh Architecture
 
 This project investigates a bio inspired sparse neural mesh substrate rather than a conventional static layer network. The architecture models physical neural tissue organized across three dimensions. Neurons occupy planar two dimensional grids of size N by N, linked horizontally and vertically through local cardinal neighbors. Successive planar grids connect along the vertical depth axis through directed synaptic axonal projections.
 
@@ -60,7 +60,7 @@ The visualizer header implements a graphical interface using the SFML graphics l
 
 The main source file serves as the system execution driver. It presents a clean choice between the interactive terminal menu featuring sixteen operational commands and the SFML graphical visualizer.
 
-## Section 2: Question 2: Dynamic Segment Tree with Lazy Propagation
+## Section 2:  Dynamic Segment Tree with Lazy Propagation
 
 Question 2 implements an algorithmic segment tree data structure capable of performing range additions, range assignments, and range maximum queries over an array of one hundred thousand elements across one hundred thousand operations while strictly obeying an operation visit budget.
 
@@ -111,7 +111,7 @@ The range max header computes the maximum element across any arbitrary subsegmen
 
 The main test driver seeds the random generator, constructs an array of one hundred thousand random integers, builds the segment tree, and executes one hundred thousand mixed operations. It computes a cumulative checksum, monitors visit counts, and validates that total visits satisfy the performance budget.
 
-## Section 3: Question 3: Maximal and Total All Ones Square Submatrices via Dynamic Programming
+## Section 3:  Maximal and Total All Ones Square Submatrices via Dynamic Programming
 
 Question 3 addresses optimal submatrix discovery in binary grids. Given an R by C binary matrix containing zeros and ones, the objective is to locate the largest square submatrix containing exclusively ones, compute its coordinates, and determine the aggregate count of all valid all ones square submatrices of any dimension.
 
